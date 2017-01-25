@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		7FF520051E38A4A600ABE071 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF520041E38A4A600ABE071 /* AppDelegate.swift */; };
-		7FF520071E38A4A600ABE071 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF520061E38A4A600ABE071 /* ViewController.swift */; };
-		7FF5200A1E38A4A600ABE071 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF520081E38A4A600ABE071 /* Main.storyboard */; };
+		7FF520071E38A4A600ABE071 /* PhotoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF520061E38A4A600ABE071 /* PhotoListController.swift */; };
 		7FF5200C1E38A4A600ABE071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF5200B1E38A4A600ABE071 /* Assets.xcassets */; };
 		7FF5200F1E38A4A600ABE071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF5200D1E38A4A600ABE071 /* LaunchScreen.storyboard */; };
+		7FF520171E38ACFF00ABE071 /* mediaPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF520161E38ACFF00ABE071 /* mediaPickerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7FF520011E38A4A600ABE071 /* FaceSnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceSnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF520041E38A4A600ABE071 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FF520061E38A4A600ABE071 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7FF520091E38A4A600ABE071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7FF520061E38A4A600ABE071 /* PhotoListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListController.swift; sourceTree = "<group>"; };
 		7FF5200B1E38A4A600ABE071 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FF5200E1E38A4A600ABE071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FF520101E38A4A600ABE071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FF520161E38ACFF00ABE071 /* mediaPickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mediaPickerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +54,9 @@
 		7FF520031E38A4A600ABE071 /* FaceSnap */ = {
 			isa = PBXGroup;
 			children = (
+				7FF520161E38ACFF00ABE071 /* mediaPickerManager.swift */,
 				7FF520041E38A4A600ABE071 /* AppDelegate.swift */,
-				7FF520061E38A4A600ABE071 /* ViewController.swift */,
-				7FF520081E38A4A600ABE071 /* Main.storyboard */,
+				7FF520061E38A4A600ABE071 /* PhotoListController.swift */,
 				7FF5200B1E38A4A600ABE071 /* Assets.xcassets */,
 				7FF5200D1E38A4A600ABE071 /* LaunchScreen.storyboard */,
 				7FF520101E38A4A600ABE071 /* Info.plist */,
@@ -126,7 +126,6 @@
 			files = (
 				7FF5200F1E38A4A600ABE071 /* LaunchScreen.storyboard in Resources */,
 				7FF5200C1E38A4A600ABE071 /* Assets.xcassets in Resources */,
-				7FF5200A1E38A4A600ABE071 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,22 +136,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FF520071E38A4A600ABE071 /* ViewController.swift in Sources */,
+				7FF520071E38A4A600ABE071 /* PhotoListController.swift in Sources */,
 				7FF520051E38A4A600ABE071 /* AppDelegate.swift in Sources */,
+				7FF520171E38ACFF00ABE071 /* mediaPickerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7FF520081E38A4A600ABE071 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7FF520091E38A4A600ABE071 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7FF5200D1E38A4A600ABE071 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -302,6 +294,7 @@
 				7FF520151E38A4A600ABE071 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
