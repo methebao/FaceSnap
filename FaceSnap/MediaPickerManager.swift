@@ -40,7 +40,7 @@ class MediaPickerManager: NSObject {
         imagePickerController.dismiss(animated: animated, completion: nil)
     }
 }
-// MARK: - Extension 
+// MARK: - Extension
 extension MediaPickerManager: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
