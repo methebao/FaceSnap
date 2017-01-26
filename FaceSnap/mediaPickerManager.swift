@@ -1,5 +1,5 @@
 //
-//  mediaPickerManager.swift
+//  MediaPickerManager.swift
 //  FaceSnap
 //
 //  Created by The Bao on 1/25/17.
@@ -9,10 +9,16 @@
 import UIKit
 import MobileCoreServices
 
+
+protocol MediaPickerManagerDelegate: class {
+    func mediaPickerManager(manager: MediaPickerManager, didFinishedPickingImage image: UIImage)
+}
 class MediaPickerManager: NSObject {
 
     private let imagePickerController = UIImagePickerController()
     private let presentingViewController: UIViewController
+
+    weak var delegate: MediaPickerManagerDelegate?
 
     init(presentingViewController: UIViewController) {
         self.presentingViewController = presentingViewController
@@ -21,16 +27,30 @@ class MediaPickerManager: NSObject {
         if UIImagePickerController.isSourceTypeAvailable(.camera)   {
             imagePickerController.sourceType = .camera
             imagePickerController.cameraDevice = .front
-        }else {
+        } else {
             imagePickerController.sourceType = .photoLibrary
         }
         imagePickerController.mediaTypes = [kUTTypeImage as String]
     }
 
-    func presentImagePickerController(animated animated: Bool){
+    func presentImagePickerController(animated: Bool){
         presentingViewController.present(imagePickerController, animated: animated, completion: nil)
     }
-    func dismissImagePikcerController(animated animated: Bool, completion: (()-> Void)){
+    func dismissImagePickerController(animated: Bool, completion: (()-> Void)){
         imagePickerController.dismiss(animated: animated, completion: nil)
     }
 }
+// MARK: - Extension 
+extension MediaPickerManager: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        delegate?.mediaPickerManager(manager: self, didFinishedPickingImage: image)
+    }
+}
+
+
+
+
+
+
+
